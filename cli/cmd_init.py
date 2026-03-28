@@ -228,7 +228,8 @@ dev-dependencies = [
 ''')
 
     # ── Config ────────────────────────────────────────────────────────────
-    paths = {"backend": str(be)}
+    # Paths are stored relative to the config file (which lives in root/)
+    paths = {"backend": str(be.relative_to(root))}
     config = {
         "project": project_name,
         "version": "0.3.0",
@@ -253,7 +254,7 @@ uv.lock
     if with_react:
         fe = root / "frontend"
         _scaffold_frontend(fe, project_name)
-        paths["frontend"] = str(fe)
+        paths["frontend"] = str(fe.relative_to(root))
 
     _write(root / "fastforge.json", json.dumps(config, indent=2))
 
