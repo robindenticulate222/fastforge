@@ -134,35 +134,33 @@ jwt_service = JwtService(TokenConfig(
 ))
 
 
+def _needs_init() -> bool:
+    """Return True only when tables are missing (first run or new models)."""
+    inspector = sa_inspect(db_config.engine)
+    db_tables = set(inspector.get_table_names())
+    model_tables = set(Base.metadata.tables.keys())
+    return not model_tables.issubset(db_tables)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # ── Startup: ensure all tables exist ─────────────────────────────
-    inspector = sa_inspect(db_config.engine)
-    existing_tables = inspector.get_table_names()
+    # ── Startup ──────────────────────────────────────────────────────
+    if _needs_init():
+        logger.info("Tables missing — running create_all + seed…")
+        Base.metadata.create_all(bind=db_config.engine)
 
-    # create_all() is idempotent — only creates MISSING tables,
-    # never alters existing ones. Safe to call every time.
-    Base.metadata.create_all(bind=db_config.engine)
+        # Stamp so Alembic knows the DB is current
+        subprocess.run(["alembic", "stamp", "head"], cwd=BACKEND_DIR, capture_output=True)
 
-    # If Alembic is set up, stamp current state so future migrations work
-    if "alembic_version" not in existing_tables:
-        subprocess.run(
-            ["alembic", "stamp", "head"], cwd=BACKEND_DIR,
-            capture_output=True,
-        )
-
-    # Apply any pending Alembic migrations (for schema changes)
-    subprocess.run(
-        ["alembic", "upgrade", "head"], cwd=BACKEND_DIR,
-        capture_output=True,
-    )
-
-    # ── Seed data (idempotent) ───────────────────────────────────────
-    db = next(db_config.get_db())
-    try:
-        seed_manager.run_all(db)
-    finally:
-        db.close()
+        # Seed data (idempotent)
+        db = next(db_config.get_db())
+        try:
+            seed_manager.run_all(db)
+        finally:
+            db.close()
+    else:
+        # Fast path on reload: only apply pending Alembic migrations
+        subprocess.run(["alembic", "upgrade", "head"], cwd=BACKEND_DIR, capture_output=True)
 
     yield
     # ── Shutdown ─────────────────────────────────────────────────────
