@@ -12,8 +12,10 @@ Usage:
         name = Column(String(255), nullable=False)
         price = Column(Numeric(10, 2), nullable=False)
 """
+import uuid
 from datetime import datetime, timezone
-from sqlalchemy import Column, Integer, String, DateTime, Boolean, event
+from sqlalchemy import Column, String, DateTime, Boolean, event
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import DeclarativeBase, declared_attr
 
 
@@ -29,7 +31,7 @@ class Entity(Base):
     """
     __abstract__ = True
 
-    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    id = Column(UUID(as_uuid=True), primary_key=True, index=True, default=uuid.uuid4)
 
     def __repr__(self):
         return f"<{self.__class__.__name__}(id={self.id})>"

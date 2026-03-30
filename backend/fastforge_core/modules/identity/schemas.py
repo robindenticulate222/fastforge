@@ -6,6 +6,7 @@ Pydantic models for auth endpoints.
 from pydantic import BaseModel, EmailStr, Field, ConfigDict
 from typing import Optional, List
 from datetime import datetime
+from uuid import UUID
 
 
 # ─── Auth ────────────────────────────────────────────────────────────────────
@@ -37,7 +38,7 @@ class RefreshRequest(BaseModel):
 # ─── User ────────────────────────────────────────────────────────────────────
 
 class UserResponse(BaseModel):
-    id: int
+    id: UUID
     email: str
     username: str
     full_name: Optional[str] = None
@@ -81,7 +82,7 @@ class RoleUpdate(BaseModel):
 
 
 class RoleResponse(BaseModel):
-    id: int
+    id: UUID
     name: str
     display_name: Optional[str]
     is_default: bool

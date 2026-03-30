@@ -83,7 +83,7 @@ class GenericRepository(Generic[T]):
 
     # ─── Read Operations ─────────────────────────────────────────────────
 
-    def get_by_id(self, id: int) -> Optional[T]:
+    def get_by_id(self, id) -> Optional[T]:
         """Get a single entity by ID. Returns None if not found or soft-deleted."""
         return self._base_query().filter(self.model_class.id == id).first()
 
@@ -157,7 +157,7 @@ class GenericRepository(Generic[T]):
                     query = query.filter(col == value)
         return query.count()
 
-    def exists(self, id: int) -> bool:
+    def exists(self, id) -> bool:
         """Check if entity exists."""
         return self.get_by_id(id) is not None
 
@@ -185,7 +185,7 @@ class GenericRepository(Generic[T]):
         self.db.refresh(entity)
         return entity
 
-    def delete(self, id: int) -> bool:
+    def delete(self, id) -> bool:
         """
         Delete an entity. Uses soft-delete if available, hard-delete otherwise.
         
@@ -209,7 +209,7 @@ class GenericRepository(Generic[T]):
             self.db.commit()
         return True
 
-    def bulk_delete(self, ids: list[int]) -> int:
+    def bulk_delete(self, ids: list) -> int:
         """Delete multiple entities by ID."""
         count = 0
         for id in ids:
@@ -224,7 +224,7 @@ class GenericRepository(Generic[T]):
         entity = self.model_class(**data)
         return self.create(entity)
 
-    def update_from_dict(self, id: int, data: dict, exclude_unset: bool = True) -> Optional[T]:
+    def update_from_dict(self, id, data: dict, exclude_unset: bool = True) -> Optional[T]:
         """Update entity from a dictionary."""
         entity = self.get_by_id(id)
         if not entity:

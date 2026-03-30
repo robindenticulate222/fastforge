@@ -83,7 +83,7 @@ class IdentityService:
                 detail="Invalid or expired refresh token",
             )
 
-        user = self.db.query(User).filter(User.id == int(user_id)).first()
+        user = self.db.query(User).filter(User.id == user_id).first()
         if not user or not user.is_active:
             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
 
@@ -91,14 +91,14 @@ class IdentityService:
 
     def get_current_profile(self, user_id: str) -> UserResponse:
         """Get current user's profile."""
-        user = self.db.query(User).filter(User.id == int(user_id)).first()
+        user = self.db.query(User).filter(User.id == user_id).first()
         if not user:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
         return self._to_user_response(user)
 
     def change_password(self, user_id: str, data: ChangePasswordRequest) -> dict:
         """Change current user's password."""
-        user = self.db.query(User).filter(User.id == int(user_id)).first()
+        user = self.db.query(User).filter(User.id == user_id).first()
         if not user:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
 
@@ -132,7 +132,7 @@ class IdentityService:
             page_size=page_size,
         )
 
-    def update_user(self, user_id: int, data: UserUpdate) -> UserResponse:
+    def update_user(self, user_id: str, data: UserUpdate) -> UserResponse:
         user = self.db.query(User).filter(User.id == user_id).first()
         if not user:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
@@ -144,7 +144,7 @@ class IdentityService:
         self.db.refresh(user)
         return self._to_user_response(user)
 
-    def assign_roles(self, user_id: int, role_names: list[str]) -> UserResponse:
+    def assign_roles(self, user_id: str, role_names: list[str]) -> UserResponse:
         """Assign roles to a user."""
         user = self.db.query(User).filter(User.id == user_id).first()
         if not user:
@@ -181,7 +181,7 @@ class IdentityService:
 
         return self._to_role_response(role)
 
-    def update_role(self, role_id: int, data: RoleUpdate) -> RoleResponse:
+    def update_role(self, role_id: str, data: RoleUpdate) -> RoleResponse:
         role = self.db.query(Role).filter(Role.id == role_id).first()
         if not role:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
@@ -197,7 +197,7 @@ class IdentityService:
         self.db.refresh(role)
         return self._to_role_response(role)
 
-    def delete_role(self, role_id: int) -> dict:
+    def delete_role(self, role_id: str) -> dict:
         role = self.db.query(Role).filter(Role.id == role_id).first()
         if not role:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
@@ -261,14 +261,14 @@ class IdentityService:
             perms.update(self._get_role_permissions(role.id))
         return perms
 
-    def _get_role_permissions(self, role_id: int) -> list[str]:
+    def _get_role_permissions(self, role_id) -> list[str]:
         """Get permissions for a role from the join table."""
         rows = self.db.execute(
             select(role_permissions.c.permission).where(role_permissions.c.role_id == role_id)
         ).fetchall()
         return [r[0] for r in rows]
 
-    def _set_role_permissions(self, role_id: int, permissions: list[str]):
+    def _set_role_permissions(self, role_id, permissions: list[str]):
         """Replace all permissions for a role."""
         self.db.execute(role_permissions.delete().where(role_permissions.c.role_id == role_id))
         for perm in permissions:

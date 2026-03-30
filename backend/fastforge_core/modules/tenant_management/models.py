@@ -4,7 +4,8 @@ FastForge Tenant Management Models
 
 Stores tenant metadata and connection strings.
 """
-from sqlalchemy import Column, String, Boolean, Text, Integer
+from sqlalchemy import Column, String, Boolean, Text
+from sqlalchemy.dialects.postgresql import UUID
 from fastforge_core.base.entities import AuditedEntity
 
 
@@ -24,6 +25,6 @@ class TenantFeature(AuditedEntity):
     """Per-tenant feature flags. FastForge's feature system."""
     __tablename__ = "fastforge_tenant_features"
 
-    tenant_id = Column(Integer, nullable=False, index=True)
+    tenant_id = Column(UUID(as_uuid=True), nullable=False, index=True)
     feature_name = Column(String(200), nullable=False)
     value = Column(String(500), nullable=True)  # "true"/"false" or a limit like "100"

@@ -20,7 +20,9 @@ Usage:
 """
 from __future__ import annotations
 from typing import Optional
-from sqlalchemy import Column, String, Text, Integer
+import uuid
+from sqlalchemy import Column, String, Text
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Session
 
 from fastforge_core.base.entities import Base
@@ -30,7 +32,7 @@ class SettingValue(Base):
     """Stores a single setting value."""
     __tablename__ = "fastforge_settings"
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     name = Column(String(200), nullable=False, index=True)
     value = Column(Text, nullable=True)
     provider_name = Column(String(50), nullable=False, default="G")  # G=Global, T=Tenant, U=User

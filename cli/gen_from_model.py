@@ -85,6 +85,7 @@ def generate_from_model(model_path: str, base_path: str, force: bool = False) ->
 
 def _gen_schemas(snake, pascal, plural, cols: list[ColumnInfo], info: ModelInfo, base_path) -> str:
     py_imports = set()
+    py_imports.add("from uuid import UUID")  # id is always UUID
     for c in cols:
         if c.python_type == "date": py_imports.add("from datetime import date")
         if c.python_type == "datetime": py_imports.add("from datetime import datetime")
@@ -133,7 +134,7 @@ class {pascal}Update(BaseModel):
 
 
 class {pascal}Response(BaseModel):
-    id: int
+    id: UUID
 {chr(10).join(response_fields)}
 {audit_response}
     model_config = ConfigDict(from_attributes=True)
@@ -293,7 +294,7 @@ def list_{plural}(
 
 
 @router.get("/{{id}}", response_model={pascal}Response)
-def get_{snake}(id: int, service: {pascal}Service = Depends(_svc)):
+def get_{snake}(id: str, service: {pascal}Service = Depends(_svc)):
     return service.get(id)
 
 
@@ -303,17 +304,17 @@ def create_{snake}(data: {pascal}Create, service: {pascal}Service = Depends(_svc
 
 
 @router.put("/{{id}}", response_model={pascal}Response)
-def update_{snake}(id: int, data: {pascal}Update, service: {pascal}Service = Depends(_svc)):
+def update_{snake}(id: str, data: {pascal}Update, service: {pascal}Service = Depends(_svc)):
     return service.update(id, data)
 
 
 @router.delete("/{{id}}")
-def delete_{snake}(id: int, service: {pascal}Service = Depends(_svc)):
+def delete_{snake}(id: str, service: {pascal}Service = Depends(_svc)):
     return service.delete(id)
 
 
 @router.post("/bulk-delete")
-def bulk_delete_{plural}(ids: List[int], service: {pascal}Service = Depends(_svc)):
+def bulk_delete_{plural}(ids: List[str], service: {pascal}Service = Depends(_svc)):
     return service.bulk_delete(ids)
 
 # ─── Add your custom endpoints below ────────────────────────────────────

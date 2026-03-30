@@ -4,7 +4,8 @@ FastForge Identity Models
 Pre-built User and Role entities.
 
 """
-from sqlalchemy import Column, String, Boolean, Table, ForeignKey, Integer
+from sqlalchemy import Column, String, Boolean, Table, ForeignKey
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 from fastforge_core.base.entities import FullAuditedEntity, Base
 
@@ -12,15 +13,15 @@ from fastforge_core.base.entities import FullAuditedEntity, Base
 user_roles = Table(
     "fastforge_user_roles",
     Base.metadata,
-    Column("user_id", Integer, ForeignKey("fastforge_users.id"), primary_key=True),
-    Column("role_id", Integer, ForeignKey("fastforge_roles.id"), primary_key=True),
+    Column("user_id", UUID(as_uuid=True), ForeignKey("fastforge_users.id"), primary_key=True),
+    Column("role_id", UUID(as_uuid=True), ForeignKey("fastforge_roles.id"), primary_key=True),
 )
 
 # Many-to-many: roles ↔ permissions
 role_permissions = Table(
     "fastforge_role_permissions",
     Base.metadata,
-    Column("role_id", Integer, ForeignKey("fastforge_roles.id"), primary_key=True),
+    Column("role_id", UUID(as_uuid=True), ForeignKey("fastforge_roles.id"), primary_key=True),
     Column("permission", String(200), primary_key=True),
 )
 

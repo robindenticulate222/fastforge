@@ -89,7 +89,7 @@ def create_identity_router(
 
     @router.put("/users/{user_id}", response_model=UserResponse, tags=["User Management"])
     def update_user(
-        user_id: int,
+        user_id: str,
         data: UserUpdate,
         service: IdentityService = Depends(_get_service),
     ):
@@ -98,7 +98,7 @@ def create_identity_router(
 
     @router.post("/users/{user_id}/roles", response_model=UserResponse, tags=["User Management"])
     def assign_roles(
-        user_id: int,
+        user_id: str,
         role_names: list[str],
         service: IdentityService = Depends(_get_service),
     ):
@@ -119,7 +119,7 @@ def create_identity_router(
 
     @router.put("/roles/{role_id}", response_model=RoleResponse, tags=["Role Management"])
     def update_role(
-        role_id: int,
+        role_id: str,
         data: RoleUpdate,
         service: IdentityService = Depends(_get_service),
     ):
@@ -127,7 +127,7 @@ def create_identity_router(
         return service.update_role(role_id, data)
 
     @router.delete("/roles/{role_id}", tags=["Role Management"])
-    def delete_role(role_id: int, service: IdentityService = Depends(_get_service)):
+    def delete_role(role_id: str, service: IdentityService = Depends(_get_service)):
         """Delete a role."""
         return service.delete_role(role_id)
 

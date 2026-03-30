@@ -1951,15 +1951,32 @@
         "documentation": {}
     },
     {
-        "label": "Column",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
+        "label": "uuid",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "sqlalchemy",
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
         "documentation": {}
     },
     {
-        "label": "Integer",
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -2079,14 +2096,6 @@
         "documentation": {}
     },
     {
-        "label": "Integer",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
         "label": "select",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -2135,14 +2144,6 @@
         "documentation": {}
     },
     {
-        "label": "Integer",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
         "label": "or_",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -2175,23 +2176,7 @@
         "documentation": {}
     },
     {
-        "label": "Integer",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
         "label": "Column",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Integer",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -2311,14 +2296,6 @@
         "documentation": {}
     },
     {
-        "label": "Integer",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
         "label": "select",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -2367,14 +2344,6 @@
         "documentation": {}
     },
     {
-        "label": "Integer",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
         "label": "or_",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -2400,14 +2369,6 @@
     },
     {
         "label": "Text",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Integer",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -2492,6 +2453,78 @@
         "description": "sqlalchemy",
         "isExtraImport": true,
         "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
         "documentation": {}
     },
     {
@@ -3605,7 +3638,7 @@
         "kind": 6,
         "importPath": "backend.build.lib.fastforge_core.base.entities",
         "description": "backend.build.lib.fastforge_core.base.entities",
-        "peekOfCode": "class Base(DeclarativeBase):\n    \"\"\"SQLAlchemy declarative base for all FastForge entities.\"\"\"\n    pass\nclass Entity(Base):\n    \"\"\"\n    Base entity with auto-incrementing integer PK.\n    \"\"\"\n    __abstract__ = True\n    id = Column(Integer, primary_key=True, index=True, autoincrement=True)\n    def __repr__(self):",
+        "peekOfCode": "class Base(DeclarativeBase):\n    \"\"\"SQLAlchemy declarative base for all FastForge entities.\"\"\"\n    pass\nclass Entity(Base):\n    \"\"\"\n    Base entity with auto-incrementing integer PK.\n    \"\"\"\n    __abstract__ = True\n    id = Column(UUID(as_uuid=True), primary_key=True, index=True, default=uuid.uuid4)\n    def __repr__(self):",
         "detail": "backend.build.lib.fastforge_core.base.entities",
         "documentation": {}
     },
@@ -3614,7 +3647,7 @@
         "kind": 6,
         "importPath": "backend.build.lib.fastforge_core.base.entities",
         "description": "backend.build.lib.fastforge_core.base.entities",
-        "peekOfCode": "class Entity(Base):\n    \"\"\"\n    Base entity with auto-incrementing integer PK.\n    \"\"\"\n    __abstract__ = True\n    id = Column(Integer, primary_key=True, index=True, autoincrement=True)\n    def __repr__(self):\n        return f\"<{self.__class__.__name__}(id={self.id})>\"\nclass AuditedEntity(Entity):\n    \"\"\"",
+        "peekOfCode": "class Entity(Base):\n    \"\"\"\n    Base entity with auto-incrementing integer PK.\n    \"\"\"\n    __abstract__ = True\n    id = Column(UUID(as_uuid=True), primary_key=True, index=True, default=uuid.uuid4)\n    def __repr__(self):\n        return f\"<{self.__class__.__name__}(id={self.id})>\"\nclass AuditedEntity(Entity):\n    \"\"\"",
         "detail": "backend.build.lib.fastforge_core.base.entities",
         "documentation": {}
     },
@@ -3875,7 +3908,7 @@
         "kind": 5,
         "importPath": "backend.build.lib.fastforge_core.modules.identity.models",
         "description": "backend.build.lib.fastforge_core.modules.identity.models",
-        "peekOfCode": "user_roles = Table(\n    \"fastforge_user_roles\",\n    Base.metadata,\n    Column(\"user_id\", Integer, ForeignKey(\"fastforge_users.id\"), primary_key=True),\n    Column(\"role_id\", Integer, ForeignKey(\"fastforge_roles.id\"), primary_key=True),\n)\n# Many-to-many: roles ↔ permissions\nrole_permissions = Table(\n    \"fastforge_role_permissions\",\n    Base.metadata,",
+        "peekOfCode": "user_roles = Table(\n    \"fastforge_user_roles\",\n    Base.metadata,\n    Column(\"user_id\", UUID(as_uuid=True), ForeignKey(\"fastforge_users.id\"), primary_key=True),\n    Column(\"role_id\", UUID(as_uuid=True), ForeignKey(\"fastforge_roles.id\"), primary_key=True),\n)\n# Many-to-many: roles ↔ permissions\nrole_permissions = Table(\n    \"fastforge_role_permissions\",\n    Base.metadata,",
         "detail": "backend.build.lib.fastforge_core.modules.identity.models",
         "documentation": {}
     },
@@ -3884,7 +3917,7 @@
         "kind": 5,
         "importPath": "backend.build.lib.fastforge_core.modules.identity.models",
         "description": "backend.build.lib.fastforge_core.modules.identity.models",
-        "peekOfCode": "role_permissions = Table(\n    \"fastforge_role_permissions\",\n    Base.metadata,\n    Column(\"role_id\", Integer, ForeignKey(\"fastforge_roles.id\"), primary_key=True),\n    Column(\"permission\", String(200), primary_key=True),\n)\nclass User(FullAuditedEntity):\n    \"\"\"Built-in user entity.\"\"\"\n    __tablename__ = \"fastforge_users\"\n    email = Column(String(320), unique=True, nullable=False, index=True)",
+        "peekOfCode": "role_permissions = Table(\n    \"fastforge_role_permissions\",\n    Base.metadata,\n    Column(\"role_id\", UUID(as_uuid=True), ForeignKey(\"fastforge_roles.id\"), primary_key=True),\n    Column(\"permission\", String(200), primary_key=True),\n)\nclass User(FullAuditedEntity):\n    \"\"\"Built-in user entity.\"\"\"\n    __tablename__ = \"fastforge_users\"\n    email = Column(String(320), unique=True, nullable=False, index=True)",
         "detail": "backend.build.lib.fastforge_core.modules.identity.models",
         "documentation": {}
     },
@@ -3929,7 +3962,7 @@
         "kind": 6,
         "importPath": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "description": "backend.build.lib.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class RefreshRequest(BaseModel):\n    refresh_token: str\n# ─── User ────────────────────────────────────────────────────────────────────\nclass UserResponse(BaseModel):\n    id: int\n    email: str\n    username: str\n    full_name: Optional[str] = None\n    is_active: bool\n    roles: List[str] = []",
+        "peekOfCode": "class RefreshRequest(BaseModel):\n    refresh_token: str\n# ─── User ────────────────────────────────────────────────────────────────────\nclass UserResponse(BaseModel):\n    id: UUID\n    email: str\n    username: str\n    full_name: Optional[str] = None\n    is_active: bool\n    roles: List[str] = []",
         "detail": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -3938,7 +3971,7 @@
         "kind": 6,
         "importPath": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "description": "backend.build.lib.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class UserResponse(BaseModel):\n    id: int\n    email: str\n    username: str\n    full_name: Optional[str] = None\n    is_active: bool\n    roles: List[str] = []\n    permissions: List[str] = []\n    created_at: datetime\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class UserResponse(BaseModel):\n    id: UUID\n    email: str\n    username: str\n    full_name: Optional[str] = None\n    is_active: bool\n    roles: List[str] = []\n    permissions: List[str] = []\n    created_at: datetime\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -3974,7 +4007,7 @@
         "kind": 6,
         "importPath": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "description": "backend.build.lib.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class RoleCreate(BaseModel):\n    name: str\n    display_name: Optional[str] = None\n    permissions: List[str] = []\nclass RoleUpdate(BaseModel):\n    display_name: Optional[str] = None\n    permissions: Optional[List[str]] = None\nclass RoleResponse(BaseModel):\n    id: int\n    name: str",
+        "peekOfCode": "class RoleCreate(BaseModel):\n    name: str\n    display_name: Optional[str] = None\n    permissions: List[str] = []\nclass RoleUpdate(BaseModel):\n    display_name: Optional[str] = None\n    permissions: Optional[List[str]] = None\nclass RoleResponse(BaseModel):\n    id: UUID\n    name: str",
         "detail": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -3983,7 +4016,7 @@
         "kind": 6,
         "importPath": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "description": "backend.build.lib.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class RoleUpdate(BaseModel):\n    display_name: Optional[str] = None\n    permissions: Optional[List[str]] = None\nclass RoleResponse(BaseModel):\n    id: int\n    name: str\n    display_name: Optional[str]\n    is_default: bool\n    permissions: List[str] = []\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class RoleUpdate(BaseModel):\n    display_name: Optional[str] = None\n    permissions: Optional[List[str]] = None\nclass RoleResponse(BaseModel):\n    id: UUID\n    name: str\n    display_name: Optional[str]\n    is_default: bool\n    permissions: List[str] = []\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -3992,7 +4025,7 @@
         "kind": 6,
         "importPath": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "description": "backend.build.lib.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class RoleResponse(BaseModel):\n    id: int\n    name: str\n    display_name: Optional[str]\n    is_default: bool\n    permissions: List[str] = []\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class RoleResponse(BaseModel):\n    id: UUID\n    name: str\n    display_name: Optional[str]\n    is_default: bool\n    permissions: List[str] = []\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "backend.build.lib.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -4019,7 +4052,7 @@
         "kind": 6,
         "importPath": "backend.build.lib.fastforge_core.modules.tenant_management.models",
         "description": "backend.build.lib.fastforge_core.modules.tenant_management.models",
-        "peekOfCode": "class TenantFeature(AuditedEntity):\n    \"\"\"Per-tenant feature flags. FastForge's feature system.\"\"\"\n    __tablename__ = \"fastforge_tenant_features\"\n    tenant_id = Column(Integer, nullable=False, index=True)\n    feature_name = Column(String(200), nullable=False)\n    value = Column(String(500), nullable=True)  # \"true\"/\"false\" or a limit like \"100\"",
+        "peekOfCode": "class TenantFeature(AuditedEntity):\n    \"\"\"Per-tenant feature flags. FastForge's feature system.\"\"\"\n    __tablename__ = \"fastforge_tenant_features\"\n    tenant_id = Column(UUID(as_uuid=True), nullable=False, index=True)\n    feature_name = Column(String(200), nullable=False)\n    value = Column(String(500), nullable=True)  # \"true\"/\"false\" or a limit like \"100\"",
         "detail": "backend.build.lib.fastforge_core.modules.tenant_management.models",
         "documentation": {}
     },
@@ -4091,7 +4124,7 @@
         "kind": 6,
         "importPath": "backend.build.lib.fastforge_core.settings.app_settings",
         "description": "backend.build.lib.fastforge_core.settings.app_settings",
-        "peekOfCode": "class SettingValue(Base):\n    \"\"\"Stores a single setting value.\"\"\"\n    __tablename__ = \"fastforge_settings\"\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    name = Column(String(200), nullable=False, index=True)\n    value = Column(Text, nullable=True)\n    provider_name = Column(String(50), nullable=False, default=\"G\")  # G=Global, T=Tenant, U=User\n    provider_key = Column(String(100), nullable=True)  # tenant_id or user_id\nclass AppSettings:\n    \"\"\"",
+        "peekOfCode": "class SettingValue(Base):\n    \"\"\"Stores a single setting value.\"\"\"\n    __tablename__ = \"fastforge_settings\"\n    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)\n    name = Column(String(200), nullable=False, index=True)\n    value = Column(Text, nullable=True)\n    provider_name = Column(String(50), nullable=False, default=\"G\")  # G=Global, T=Tenant, U=User\n    provider_key = Column(String(100), nullable=True)  # tenant_id or user_id\nclass AppSettings:\n    \"\"\"",
         "detail": "backend.build.lib.fastforge_core.settings.app_settings",
         "documentation": {}
     },
@@ -4334,7 +4367,7 @@
         "kind": 6,
         "importPath": "backend.fastforge_core.base.entities",
         "description": "backend.fastforge_core.base.entities",
-        "peekOfCode": "class Base(DeclarativeBase):\n    \"\"\"SQLAlchemy declarative base for all FastForge entities.\"\"\"\n    pass\nclass Entity(Base):\n    \"\"\"\n    Base entity with auto-incrementing integer PK.\n    \"\"\"\n    __abstract__ = True\n    id = Column(Integer, primary_key=True, index=True, autoincrement=True)\n    def __repr__(self):",
+        "peekOfCode": "class Base(DeclarativeBase):\n    \"\"\"SQLAlchemy declarative base for all FastForge entities.\"\"\"\n    pass\nclass Entity(Base):\n    \"\"\"\n    Base entity with auto-incrementing integer PK.\n    \"\"\"\n    __abstract__ = True\n    id = Column(UUID(as_uuid=True), primary_key=True, index=True, default=uuid.uuid4)\n    def __repr__(self):",
         "detail": "backend.fastforge_core.base.entities",
         "documentation": {}
     },
@@ -4343,7 +4376,7 @@
         "kind": 6,
         "importPath": "backend.fastforge_core.base.entities",
         "description": "backend.fastforge_core.base.entities",
-        "peekOfCode": "class Entity(Base):\n    \"\"\"\n    Base entity with auto-incrementing integer PK.\n    \"\"\"\n    __abstract__ = True\n    id = Column(Integer, primary_key=True, index=True, autoincrement=True)\n    def __repr__(self):\n        return f\"<{self.__class__.__name__}(id={self.id})>\"\nclass AuditedEntity(Entity):\n    \"\"\"",
+        "peekOfCode": "class Entity(Base):\n    \"\"\"\n    Base entity with auto-incrementing integer PK.\n    \"\"\"\n    __abstract__ = True\n    id = Column(UUID(as_uuid=True), primary_key=True, index=True, default=uuid.uuid4)\n    def __repr__(self):\n        return f\"<{self.__class__.__name__}(id={self.id})>\"\nclass AuditedEntity(Entity):\n    \"\"\"",
         "detail": "backend.fastforge_core.base.entities",
         "documentation": {}
     },
@@ -4604,7 +4637,7 @@
         "kind": 5,
         "importPath": "backend.fastforge_core.modules.identity.models",
         "description": "backend.fastforge_core.modules.identity.models",
-        "peekOfCode": "user_roles = Table(\n    \"fastforge_user_roles\",\n    Base.metadata,\n    Column(\"user_id\", Integer, ForeignKey(\"fastforge_users.id\"), primary_key=True),\n    Column(\"role_id\", Integer, ForeignKey(\"fastforge_roles.id\"), primary_key=True),\n)\n# Many-to-many: roles ↔ permissions\nrole_permissions = Table(\n    \"fastforge_role_permissions\",\n    Base.metadata,",
+        "peekOfCode": "user_roles = Table(\n    \"fastforge_user_roles\",\n    Base.metadata,\n    Column(\"user_id\", UUID(as_uuid=True), ForeignKey(\"fastforge_users.id\"), primary_key=True),\n    Column(\"role_id\", UUID(as_uuid=True), ForeignKey(\"fastforge_roles.id\"), primary_key=True),\n)\n# Many-to-many: roles ↔ permissions\nrole_permissions = Table(\n    \"fastforge_role_permissions\",\n    Base.metadata,",
         "detail": "backend.fastforge_core.modules.identity.models",
         "documentation": {}
     },
@@ -4613,7 +4646,7 @@
         "kind": 5,
         "importPath": "backend.fastforge_core.modules.identity.models",
         "description": "backend.fastforge_core.modules.identity.models",
-        "peekOfCode": "role_permissions = Table(\n    \"fastforge_role_permissions\",\n    Base.metadata,\n    Column(\"role_id\", Integer, ForeignKey(\"fastforge_roles.id\"), primary_key=True),\n    Column(\"permission\", String(200), primary_key=True),\n)\nclass User(FullAuditedEntity):\n    \"\"\"Built-in user entity.\"\"\"\n    __tablename__ = \"fastforge_users\"\n    email = Column(String(320), unique=True, nullable=False, index=True)",
+        "peekOfCode": "role_permissions = Table(\n    \"fastforge_role_permissions\",\n    Base.metadata,\n    Column(\"role_id\", UUID(as_uuid=True), ForeignKey(\"fastforge_roles.id\"), primary_key=True),\n    Column(\"permission\", String(200), primary_key=True),\n)\nclass User(FullAuditedEntity):\n    \"\"\"Built-in user entity.\"\"\"\n    __tablename__ = \"fastforge_users\"\n    email = Column(String(320), unique=True, nullable=False, index=True)",
         "detail": "backend.fastforge_core.modules.identity.models",
         "documentation": {}
     },
@@ -4658,7 +4691,7 @@
         "kind": 6,
         "importPath": "backend.fastforge_core.modules.identity.schemas",
         "description": "backend.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class RefreshRequest(BaseModel):\n    refresh_token: str\n# ─── User ────────────────────────────────────────────────────────────────────\nclass UserResponse(BaseModel):\n    id: int\n    email: str\n    username: str\n    full_name: Optional[str] = None\n    is_active: bool\n    roles: List[str] = []",
+        "peekOfCode": "class RefreshRequest(BaseModel):\n    refresh_token: str\n# ─── User ────────────────────────────────────────────────────────────────────\nclass UserResponse(BaseModel):\n    id: UUID\n    email: str\n    username: str\n    full_name: Optional[str] = None\n    is_active: bool\n    roles: List[str] = []",
         "detail": "backend.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -4667,7 +4700,7 @@
         "kind": 6,
         "importPath": "backend.fastforge_core.modules.identity.schemas",
         "description": "backend.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class UserResponse(BaseModel):\n    id: int\n    email: str\n    username: str\n    full_name: Optional[str] = None\n    is_active: bool\n    roles: List[str] = []\n    permissions: List[str] = []\n    created_at: datetime\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class UserResponse(BaseModel):\n    id: UUID\n    email: str\n    username: str\n    full_name: Optional[str] = None\n    is_active: bool\n    roles: List[str] = []\n    permissions: List[str] = []\n    created_at: datetime\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "backend.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -4703,7 +4736,7 @@
         "kind": 6,
         "importPath": "backend.fastforge_core.modules.identity.schemas",
         "description": "backend.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class RoleCreate(BaseModel):\n    name: str\n    display_name: Optional[str] = None\n    permissions: List[str] = []\nclass RoleUpdate(BaseModel):\n    display_name: Optional[str] = None\n    permissions: Optional[List[str]] = None\nclass RoleResponse(BaseModel):\n    id: int\n    name: str",
+        "peekOfCode": "class RoleCreate(BaseModel):\n    name: str\n    display_name: Optional[str] = None\n    permissions: List[str] = []\nclass RoleUpdate(BaseModel):\n    display_name: Optional[str] = None\n    permissions: Optional[List[str]] = None\nclass RoleResponse(BaseModel):\n    id: UUID\n    name: str",
         "detail": "backend.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -4712,7 +4745,7 @@
         "kind": 6,
         "importPath": "backend.fastforge_core.modules.identity.schemas",
         "description": "backend.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class RoleUpdate(BaseModel):\n    display_name: Optional[str] = None\n    permissions: Optional[List[str]] = None\nclass RoleResponse(BaseModel):\n    id: int\n    name: str\n    display_name: Optional[str]\n    is_default: bool\n    permissions: List[str] = []\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class RoleUpdate(BaseModel):\n    display_name: Optional[str] = None\n    permissions: Optional[List[str]] = None\nclass RoleResponse(BaseModel):\n    id: UUID\n    name: str\n    display_name: Optional[str]\n    is_default: bool\n    permissions: List[str] = []\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "backend.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -4721,7 +4754,7 @@
         "kind": 6,
         "importPath": "backend.fastforge_core.modules.identity.schemas",
         "description": "backend.fastforge_core.modules.identity.schemas",
-        "peekOfCode": "class RoleResponse(BaseModel):\n    id: int\n    name: str\n    display_name: Optional[str]\n    is_default: bool\n    permissions: List[str] = []\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class RoleResponse(BaseModel):\n    id: UUID\n    name: str\n    display_name: Optional[str]\n    is_default: bool\n    permissions: List[str] = []\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "backend.fastforge_core.modules.identity.schemas",
         "documentation": {}
     },
@@ -4748,7 +4781,7 @@
         "kind": 6,
         "importPath": "backend.fastforge_core.modules.tenant_management.models",
         "description": "backend.fastforge_core.modules.tenant_management.models",
-        "peekOfCode": "class TenantFeature(AuditedEntity):\n    \"\"\"Per-tenant feature flags. FastForge's feature system.\"\"\"\n    __tablename__ = \"fastforge_tenant_features\"\n    tenant_id = Column(Integer, nullable=False, index=True)\n    feature_name = Column(String(200), nullable=False)\n    value = Column(String(500), nullable=True)  # \"true\"/\"false\" or a limit like \"100\"",
+        "peekOfCode": "class TenantFeature(AuditedEntity):\n    \"\"\"Per-tenant feature flags. FastForge's feature system.\"\"\"\n    __tablename__ = \"fastforge_tenant_features\"\n    tenant_id = Column(UUID(as_uuid=True), nullable=False, index=True)\n    feature_name = Column(String(200), nullable=False)\n    value = Column(String(500), nullable=True)  # \"true\"/\"false\" or a limit like \"100\"",
         "detail": "backend.fastforge_core.modules.tenant_management.models",
         "documentation": {}
     },
@@ -4820,7 +4853,7 @@
         "kind": 6,
         "importPath": "backend.fastforge_core.settings.app_settings",
         "description": "backend.fastforge_core.settings.app_settings",
-        "peekOfCode": "class SettingValue(Base):\n    \"\"\"Stores a single setting value.\"\"\"\n    __tablename__ = \"fastforge_settings\"\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    name = Column(String(200), nullable=False, index=True)\n    value = Column(Text, nullable=True)\n    provider_name = Column(String(50), nullable=False, default=\"G\")  # G=Global, T=Tenant, U=User\n    provider_key = Column(String(100), nullable=True)  # tenant_id or user_id\nclass AppSettings:\n    \"\"\"",
+        "peekOfCode": "class SettingValue(Base):\n    \"\"\"Stores a single setting value.\"\"\"\n    __tablename__ = \"fastforge_settings\"\n    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)\n    name = Column(String(200), nullable=False, index=True)\n    value = Column(Text, nullable=True)\n    provider_name = Column(String(50), nullable=False, default=\"G\")  # G=Global, T=Tenant, U=User\n    provider_key = Column(String(100), nullable=True)  # tenant_id or user_id\nclass AppSettings:\n    \"\"\"",
         "detail": "backend.fastforge_core.settings.app_settings",
         "documentation": {}
     },
@@ -5180,7 +5213,7 @@
         "kind": 6,
         "importPath": "cli.gen_from_model",
         "description": "cli.gen_from_model",
-        "peekOfCode": "class {pascal}Create(BaseModel):\n{chr(10).join(create_fields) if create_fields else \"    pass\"}\nclass {pascal}Update(BaseModel):\n{chr(10).join(update_fields) if update_fields else \"    pass\"}\nclass {pascal}Response(BaseModel):\n    id: int\n{chr(10).join(response_fields)}\n{audit_response}\n    model_config = ConfigDict(from_attributes=True)\nclass {pascal}ListResponse(BaseModel):",
+        "peekOfCode": "class {pascal}Create(BaseModel):\n{chr(10).join(create_fields) if create_fields else \"    pass\"}\nclass {pascal}Update(BaseModel):\n{chr(10).join(update_fields) if update_fields else \"    pass\"}\nclass {pascal}Response(BaseModel):\n    id: UUID\n{chr(10).join(response_fields)}\n{audit_response}\n    model_config = ConfigDict(from_attributes=True)\nclass {pascal}ListResponse(BaseModel):",
         "detail": "cli.gen_from_model",
         "documentation": {}
     },
@@ -5189,7 +5222,7 @@
         "kind": 6,
         "importPath": "cli.gen_from_model",
         "description": "cli.gen_from_model",
-        "peekOfCode": "class {pascal}Update(BaseModel):\n{chr(10).join(update_fields) if update_fields else \"    pass\"}\nclass {pascal}Response(BaseModel):\n    id: int\n{chr(10).join(response_fields)}\n{audit_response}\n    model_config = ConfigDict(from_attributes=True)\nclass {pascal}ListResponse(BaseModel):\n    items: List[{pascal}Response]\n    total: int",
+        "peekOfCode": "class {pascal}Update(BaseModel):\n{chr(10).join(update_fields) if update_fields else \"    pass\"}\nclass {pascal}Response(BaseModel):\n    id: UUID\n{chr(10).join(response_fields)}\n{audit_response}\n    model_config = ConfigDict(from_attributes=True)\nclass {pascal}ListResponse(BaseModel):\n    items: List[{pascal}Response]\n    total: int",
         "detail": "cli.gen_from_model",
         "documentation": {}
     },
@@ -5198,7 +5231,7 @@
         "kind": 6,
         "importPath": "cli.gen_from_model",
         "description": "cli.gen_from_model",
-        "peekOfCode": "class {pascal}Response(BaseModel):\n    id: int\n{chr(10).join(response_fields)}\n{audit_response}\n    model_config = ConfigDict(from_attributes=True)\nclass {pascal}ListResponse(BaseModel):\n    items: List[{pascal}Response]\n    total: int\n    page: int\n    page_size: int",
+        "peekOfCode": "class {pascal}Response(BaseModel):\n    id: UUID\n{chr(10).join(response_fields)}\n{audit_response}\n    model_config = ConfigDict(from_attributes=True)\nclass {pascal}ListResponse(BaseModel):\n    items: List[{pascal}Response]\n    total: int\n    page: int\n    page_size: int",
         "detail": "cli.gen_from_model",
         "documentation": {}
     },
@@ -5252,7 +5285,7 @@
         "kind": 2,
         "importPath": "cli.gen_from_model",
         "description": "cli.gen_from_model",
-        "peekOfCode": "def get_{snake}(id: int, service: {pascal}Service = Depends(_svc)):\n    return service.get(id)\n@router.post(\"/\", response_model={pascal}Response, status_code=201)\ndef create_{snake}(data: {pascal}Create, service: {pascal}Service = Depends(_svc)):\n    return service.create(data)\n@router.put(\"/{{id}}\", response_model={pascal}Response)\ndef update_{snake}(id: int, data: {pascal}Update, service: {pascal}Service = Depends(_svc)):\n    return service.update(id, data)\n@router.delete(\"/{{id}}\")\ndef delete_{snake}(id: int, service: {pascal}Service = Depends(_svc)):",
+        "peekOfCode": "def get_{snake}(id: str, service: {pascal}Service = Depends(_svc)):\n    return service.get(id)\n@router.post(\"/\", response_model={pascal}Response, status_code=201)\ndef create_{snake}(data: {pascal}Create, service: {pascal}Service = Depends(_svc)):\n    return service.create(data)\n@router.put(\"/{{id}}\", response_model={pascal}Response)\ndef update_{snake}(id: str, data: {pascal}Update, service: {pascal}Service = Depends(_svc)):\n    return service.update(id, data)\n@router.delete(\"/{{id}}\")\ndef delete_{snake}(id: str, service: {pascal}Service = Depends(_svc)):",
         "detail": "cli.gen_from_model",
         "documentation": {}
     },
@@ -5261,7 +5294,7 @@
         "kind": 2,
         "importPath": "cli.gen_from_model",
         "description": "cli.gen_from_model",
-        "peekOfCode": "def create_{snake}(data: {pascal}Create, service: {pascal}Service = Depends(_svc)):\n    return service.create(data)\n@router.put(\"/{{id}}\", response_model={pascal}Response)\ndef update_{snake}(id: int, data: {pascal}Update, service: {pascal}Service = Depends(_svc)):\n    return service.update(id, data)\n@router.delete(\"/{{id}}\")\ndef delete_{snake}(id: int, service: {pascal}Service = Depends(_svc)):\n    return service.delete(id)\n@router.post(\"/bulk-delete\")\ndef bulk_delete_{plural}(ids: List[int], service: {pascal}Service = Depends(_svc)):",
+        "peekOfCode": "def create_{snake}(data: {pascal}Create, service: {pascal}Service = Depends(_svc)):\n    return service.create(data)\n@router.put(\"/{{id}}\", response_model={pascal}Response)\ndef update_{snake}(id: str, data: {pascal}Update, service: {pascal}Service = Depends(_svc)):\n    return service.update(id, data)\n@router.delete(\"/{{id}}\")\ndef delete_{snake}(id: str, service: {pascal}Service = Depends(_svc)):\n    return service.delete(id)\n@router.post(\"/bulk-delete\")\ndef bulk_delete_{plural}(ids: List[str], service: {pascal}Service = Depends(_svc)):",
         "detail": "cli.gen_from_model",
         "documentation": {}
     },
@@ -5270,7 +5303,7 @@
         "kind": 2,
         "importPath": "cli.gen_from_model",
         "description": "cli.gen_from_model",
-        "peekOfCode": "def update_{snake}(id: int, data: {pascal}Update, service: {pascal}Service = Depends(_svc)):\n    return service.update(id, data)\n@router.delete(\"/{{id}}\")\ndef delete_{snake}(id: int, service: {pascal}Service = Depends(_svc)):\n    return service.delete(id)\n@router.post(\"/bulk-delete\")\ndef bulk_delete_{plural}(ids: List[int], service: {pascal}Service = Depends(_svc)):\n    return service.bulk_delete(ids)\n# ─── Add your custom endpoints below ────────────────────────────────────\n#",
+        "peekOfCode": "def update_{snake}(id: str, data: {pascal}Update, service: {pascal}Service = Depends(_svc)):\n    return service.update(id, data)\n@router.delete(\"/{{id}}\")\ndef delete_{snake}(id: str, service: {pascal}Service = Depends(_svc)):\n    return service.delete(id)\n@router.post(\"/bulk-delete\")\ndef bulk_delete_{plural}(ids: List[str], service: {pascal}Service = Depends(_svc)):\n    return service.bulk_delete(ids)\n# ─── Add your custom endpoints below ────────────────────────────────────\n#",
         "detail": "cli.gen_from_model",
         "documentation": {}
     },
@@ -5279,7 +5312,7 @@
         "kind": 2,
         "importPath": "cli.gen_from_model",
         "description": "cli.gen_from_model",
-        "peekOfCode": "def delete_{snake}(id: int, service: {pascal}Service = Depends(_svc)):\n    return service.delete(id)\n@router.post(\"/bulk-delete\")\ndef bulk_delete_{plural}(ids: List[int], service: {pascal}Service = Depends(_svc)):\n    return service.bulk_delete(ids)\n# ─── Add your custom endpoints below ────────────────────────────────────\n#\n# @router.get(\"/stats\")\n# def get_{snake}_stats(service: {pascal}Service = Depends(_svc)):\n#     return {{\"total\": service.repo.count()}}",
+        "peekOfCode": "def delete_{snake}(id: str, service: {pascal}Service = Depends(_svc)):\n    return service.delete(id)\n@router.post(\"/bulk-delete\")\ndef bulk_delete_{plural}(ids: List[str], service: {pascal}Service = Depends(_svc)):\n    return service.bulk_delete(ids)\n# ─── Add your custom endpoints below ────────────────────────────────────\n#\n# @router.get(\"/stats\")\n# def get_{snake}_stats(service: {pascal}Service = Depends(_svc)):\n#     return {{\"total\": service.repo.count()}}",
         "detail": "cli.gen_from_model",
         "documentation": {}
     },
@@ -5288,7 +5321,7 @@
         "kind": 2,
         "importPath": "cli.gen_from_model",
         "description": "cli.gen_from_model",
-        "peekOfCode": "def bulk_delete_{plural}(ids: List[int], service: {pascal}Service = Depends(_svc)):\n    return service.bulk_delete(ids)\n# ─── Add your custom endpoints below ────────────────────────────────────\n#\n# @router.get(\"/stats\")\n# def get_{snake}_stats(service: {pascal}Service = Depends(_svc)):\n#     return {{\"total\": service.repo.count()}}\n'''\n    writer = _write_always if overwrite else _write_once\n    return writer(f\"{base_path}/app/api/routes/{snake}.py\", content)",
+        "peekOfCode": "def bulk_delete_{plural}(ids: List[str], service: {pascal}Service = Depends(_svc)):\n    return service.bulk_delete(ids)\n# ─── Add your custom endpoints below ────────────────────────────────────\n#\n# @router.get(\"/stats\")\n# def get_{snake}_stats(service: {pascal}Service = Depends(_svc)):\n#     return {{\"total\": service.repo.count()}}\n'''\n    writer = _write_always if overwrite else _write_once\n    return writer(f\"{base_path}/app/api/routes/{snake}.py\", content)",
         "detail": "cli.gen_from_model",
         "documentation": {}
     },

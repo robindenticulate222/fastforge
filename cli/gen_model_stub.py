@@ -70,6 +70,7 @@ Define your columns below. Then run:
   2. fastforge generate {snake}  — generate schemas, repo, service, router
 """
 from sqlalchemy import Column, String, Integer, Float, Boolean, Text, DateTime, Date, Numeric, ForeignKey
+from sqlalchemy.dialects.postgresql import UUID
 from fastforge_core import FullAuditedEntity
 
 
@@ -85,7 +86,7 @@ class {pascal}(FullAuditedEntity):
     # quantity = Column(Integer, default=0)
     # is_active = Column(Boolean, default=True, nullable=False)
     # email = Column(String(320), nullable=False, unique=True)
-    # category_id = Column(Integer, ForeignKey("categories.id"), nullable=True)
+    # category_id = Column(UUID(as_uuid=True), ForeignKey("categories.id"), nullable=True)
     # published_at = Column(DateTime(timezone=True), nullable=True)
 
     # ── Searchable fields (used by GenericRepository for text search) ────
